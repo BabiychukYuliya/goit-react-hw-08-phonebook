@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { Input } from './Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { onChangeFilter } from 'redux/filterSlice';
-import { getFilter } from 'redux/selectors';
+import { onChangeFilter } from 'redux/contacts/filterSlice';
+import { getFilter } from 'redux/contacts/selectors';
 
 const Filter = () => {
   const dispatch = useDispatch();

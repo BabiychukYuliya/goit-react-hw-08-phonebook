@@ -15,20 +15,16 @@ export const App = () => {
      const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
-    useEffect(() => {
-    dispatch(refreshUser());
-  }, [dispatch]);
+ 
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
- 
-    return isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
 
-    
-        <Routes>
+  return (isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) :
+   <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route
@@ -51,6 +47,7 @@ export const App = () => {
         />
       </Route>
     </Routes>
-    
-  );
+)
+       
+
 };

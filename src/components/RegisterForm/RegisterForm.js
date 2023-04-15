@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operationsAuth';
 import css from './RegisterForm.module.css';
+import PropTypes from 'prop-types';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -35,4 +36,9 @@ export const RegisterForm = () => {
       <button type="submit">Register</button>
     </form>
   );
+};
+
+
+RegisterForm.propTypes = {
+  onSubmit: PropTypes.func,
 };

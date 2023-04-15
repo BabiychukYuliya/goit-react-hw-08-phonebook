@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FormStyle, Label, Input, ButtonAdd } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/contacts/selectors';
@@ -77,3 +78,10 @@ const Form = () => {
 };
 
 export default Form;
+
+
+Form.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+  onSubmit: PropTypes.func,
+}
